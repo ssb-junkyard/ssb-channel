@@ -1,6 +1,6 @@
 {
   "name": "ssb-channel",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "open channels for rpc between secure scuttlebot nodes",
   "main": "index.js",
   "scripts": {
