@@ -10,6 +10,9 @@
     "type": "git",
     "url": "git://github.com/ssbc/ssb-channel.git"
   },
+  "dependencies": {
+    "ssb-address": "~1.0.0"
+  },
   "author": "Paul Frazee <pfrazee@gmail.com>",
   "license": "MIT",
   "bugs": {
