@@ -11,6 +11,8 @@
     "url": "git://github.com/ssbc/ssb-channel.git"
   },
   "dependencies": {
+    "pull-stream": "~2.24.1",
+    "pull-ws-server": "~1.1.1",
     "ssb-address": "~1.0.0"
   },
   "author": "Paul Frazee <pfrazee@gmail.com>",
