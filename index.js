@@ -30,15 +30,17 @@ exports.connect = function (rpcapi, addr, cb) {
   }
 
   chan.close = function(cb) {
-    this.rpcStream.close(cb || function(){})
     this.wsStream.socket.close()
+    this.rpcStream.close(cb || function(){})
   }
 
   chan.reconnect = function(opts) {
     opts = opts || {}
-    opts.wait = (typeof opts.wait == 'undefined') ? 10*1000 : opts.wait
     chan.close(function() {
-      setTimeout(chan.connect.bind(chan, chan.addr), opts.wait)
+      if (opts.wait)
+        setTimeout(chan.connect.bind(chan, chan.addr), opts.wait)
+      else
+        chan.connect(chan.addr)
     })
   }
 

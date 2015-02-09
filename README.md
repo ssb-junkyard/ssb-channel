@@ -64,7 +64,7 @@ mychan.connect(address, optOnConnectCB)
 mychan.close(optOnCloseCB)
 
 // drop connection (if present) and reconnect
-// - wait is optional, defaults to 10s (10000 ms)
+// - wait is optional, defaults to immediate
 mychan.reconnect({ wait: 10*1000 }, optOnConnectCB)
 
 // events
